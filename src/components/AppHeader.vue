@@ -14,6 +14,7 @@ data(){
          { title:"DC Heros", url: "/dc-heros"},
          { title:"Calender", url: "/calender"},
          { title:"Markdown App", url: "/markdown"},
+         { title:"Slider carousel App", url: "/slider"},
       ]
    }
 }
