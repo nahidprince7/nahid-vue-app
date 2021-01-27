@@ -1,6 +1,6 @@
 <template>
 <div class="m-auto">
-<h1 class="text-2xl text-center">Welcome to 10 Apps created with Vue, Pushed from git hub</h1>
+<h1 class="text-2xl text-center">Welcome to 10 Apps created with Vue by Nahid !!</h1>
 </div>
 </template>
 
