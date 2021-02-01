@@ -16,7 +16,7 @@
     </li>
   </ul>
   <form class="mt-10" @submit.prevent="addHero">
-  <input class="border rounded" v-model="newHero"  />
+  <input class="border rounded" v-model="newHero" ref="newHeroRef" />
     <button class="border rounded bg-gray" type="submit">Save</button>
   </form>
   <small>total heros in this list : {{herosCount}}</small>
@@ -33,6 +33,9 @@ export default {
       newHero:"Aquaman",
       dcHeros:["SuperGirl","Flash","Batman"]
           }
+  },
+  mounted(){
+    this.$refs.newHeroRef.focus()
   },
   computed:{
     herosCount(){

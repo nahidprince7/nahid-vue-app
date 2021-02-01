@@ -1,5 +1,5 @@
 <template>
-<AppHeader @open-login-modal="isLoginOpen=true"></AppHeader>
+<AppHeader :isLoggedInProp="isLoggedIn"  @open-login-modal="isLoginOpen=true"></AppHeader>
 <router-view></router-view>
 <LoginModal v-if="isLoginOpen" @close-login-modal="isLoginOpen=false"> </LoginModal>
 </template>
@@ -9,6 +9,7 @@ import AppHeader from "./components/AppHeader";
 import LoginModal from "./pages/LoginModal";
 import firebase from "./utilities/firebase"
 export default {
+
   data(){
     return{
       isLoginOpen:false,
@@ -18,7 +19,7 @@ export default {
     }
   },
   mounted(){
-    firebase.auth().onAuthStateChanged((user)=> {
+    firebase.auth().onAuthStateChanged((user)=>  {
   if (user) {
     this.isLoggedIn = true
     this.authUser = user

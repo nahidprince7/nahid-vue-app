@@ -13,7 +13,7 @@
             <label for="">
             Email or Username
           </label>
-          <input v-model="email" type="text" class="rounded shadow p-2 w-full" placeholder="Enter Email or Username"/>
+          <input ref="email" v-model="email" type="text" class="rounded shadow p-2 w-full" placeholder="Enter Email or Username"/>
           </div>
            <div class="my-4">
           <label for="">
@@ -52,6 +52,9 @@ export default {
         isLoading:false
     }
   },
+  mounted(){
+    this.$refs.email.focus()
+  },
   methods:{
     submit(){
       this.isLoading=true
@@ -60,7 +63,9 @@ export default {
         this.email=""
         this.password=""
         this.isLoading=false
+        alert("Logged In Successfully")
         this.close()
+        
       })
       .catch((e)=>{
         this.isLoading=false

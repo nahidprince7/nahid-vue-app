@@ -30,6 +30,9 @@ export default {
       return marked(this.text);
     },
   },
+   mounted(){
+    this.$refs.markdownTextArea.focus()
+  },
   methods: {
     update(e) {
       const task = () => (this.text = e.target.value);

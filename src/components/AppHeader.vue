@@ -2,14 +2,16 @@
  <nav class="w-full bg-gradient-to-r from-red-400 to-gray-400 px-4 py-2 text-black">
    <router-link v-for="item in lists" :key="item.url" :to="item.url" class="mx-2">{{item.title}}</router-link>
    
-   <button class="mx-2" @click="$emit('open-login-modal')">Login</button>
-   <button class="mx-2" @click="logout">Logout</button>
+   
+   <button v-if="isLoggedInProp" class="mx-2 float-right" @click="logout">Logout</button>
+   <button v-else class="mx-2 float-right" @click="$emit('open-login-modal')">Login</button>
  </nav>
 </template>
 
 <script>
 import firebase from "../utilities/firebase"
 export default {
+   props:{"isLoggedInProp":Boolean},
 data(){
 
    return {
@@ -25,8 +27,9 @@ data(){
 methods:{
    logout(){
       firebase.auth().signOut()
+      alert("You are logged out successfully")
       // .then(res=>{
-
+ 
       // }).catch(e=>{
       //    console.log(e)
       // })
