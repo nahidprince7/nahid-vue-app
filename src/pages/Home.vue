@@ -22,46 +22,29 @@
       <div class="contacts">
         <div class="title">Contacts</div>
         <div class="contact-list">
-          <div class="effect jaques">
-    
-    <div class="buttons">
-      <a href="#" class="fb" title="Join us on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-      <a href="#" class="tw" title="Join us on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-      <a href="#" class="g-plus" title="Join us on Google+"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-      <!-- <a href="#" class="dribbble" title="Join us on Dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a> -->
-      <!-- <a href="#" class="vimeo" title="Join us on Vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a> -->
-    <!-- <a href="#" class="pinterest" title="Join us on Pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a> -->
-      <a href="#" class="insta" title="Join us on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      <a href="#" class="in" title="Join us on Linked In"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-    </div>
+    <div class="effect jaques">
+    <div class=" text-black buttons">
+      <a href="https://www.facebook.com/nahidhp" class="fb" title="Join us on Facebook"> 
+        <i class="fab fa-facebook-f"></i>
+      </a>
+       <a href="https://www.instagram.com/nahid_hasan_prince/" class="insta" title="Join us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/nahid-hasan-336468148/" class="in" title="Join us on Linked In"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+
+      <a href="https://github.com/nahidprince7" class="tw" title="Join us on Twitter"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="https://bitbucket.org/nahidbracnet/" class="g-plus" title="Join us on Google+"><i class="fab fa-bitbucket" aria-hidden="true"></i></a>
+         </div>
   </div>
+  
         </div>
+        <div class="text-center" style="padding-top:15px">
+<a href="https://nahidprince7.wixsite.com/nahid" style="margin-botton:2px" class="text-red-700 text-xl"> <span>Know more about me</span> <i class="fas fa-arrow-circle-right px-2" style="margin-top:2px"></i></a>
+
+        </div>
+        
       </div>
     </div>
   </div>
 </div>
-
-
-
-<!-- <div class="container">
-  <div class="profile-card">
-    <div class="profile-card__header">
-      <div class="profile-card__image">
-        <div class="wrapper"><img src="https://static.wixstatic.com/media/f1c3e8_1fd67a6c77014de784ff69620189479c~mv2_d_1448_2048_s_2.jpg/v1/fill/w_470,h_470,al_c,q_80,usm_0.66_1.00_0.01/f1c3e8_1fd67a6c77014de784ff69620189479c~mv2_d_1448_2048_s_2.webp" alt="User Image"/></div>
-      </div>
-      <div class="profile-card__info"><span class="profile-card__name">Nahid Hasan</span><span class="profile-card__designation">Software Engineer</span></div>
-    </div>
-    <div class="profile-card__footer">
-          <a href="https://github.com/nahidprince7" target="_blank"><img class="social" src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_black-128.png" alt="social"/></a>
-  <a href="https://dribbble.com/EdgarElias" target="_blank"><img class="social" src="http://icons.iconarchive.com/icons/martz90/circle/512/dribble-icon.png" alt="social"/></a>
-  <a href="https://www.linkedin.com/in/nahid-hasan-336468148/" target="_blank"><img class="social" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Linkedin_circle.svg/100px-Linkedin_circle.svg.png" alt="social"/></a>
-  <a href="https://codepen.io/EdgarElias/" target="_blank"><img class="social" src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png" alt="social"/></a>
-        </div>
-  </div>
-</div> -->
-<!-- <div class="m-auto">
-<h1 class="text-2xl text-center">Welcome to 10 Apps created with Vue by Nahid !!</h1>
-</div> -->
 </template>
 <script>
 export default {
@@ -72,7 +55,7 @@ export default {
 <style>
 .effect {
   width: 100%;
-  padding: 50px 0px 70px 0px;
+  /* padding: 50px 0px 70px 0px; */
   background-color: #212121;
 }
 .effect h2 {
@@ -83,7 +66,7 @@ export default {
   letter-spacing: 3px;
 }
 .effect:nth-child(2) {
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 .effect:nth-child(2n+1) {
   background-color: #fff;
@@ -92,7 +75,7 @@ export default {
   color: #212121;
 }
 .effect .buttons {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   display: flex;
   justify-content: center;
 }
@@ -101,9 +84,6 @@ export default {
 }
 
 /*common link styles !!!YOU NEED THEM*/
-.effect {
-  /*display: flex; !!!uncomment this line !!!*/
-}
 .effect a {
   text-decoration: none !important;
   color: #fff;
@@ -126,10 +106,10 @@ export default {
   background-color: #3b5998;
 }
 .effect a.tw {
-  background-color: #00aced;
+  background-color: black;
 }
 .effect a.g-plus {
-  background-color: #dd4b39;
+  background-color: #0747A6;
 }
 .effect a.dribbble {
   background-color: #ea4c89;

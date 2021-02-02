@@ -8,6 +8,8 @@
 import AppHeader from "./components/AppHeader";
 import LoginModal from "./pages/LoginModal";
 import firebase from "./utilities/firebase"
+
+
 export default {
 
   data(){
