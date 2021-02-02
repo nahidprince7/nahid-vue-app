@@ -37,10 +37,10 @@ export default {
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
 
-body {
-  background-color: #ff425a;
+/* body {
+  background-color: #94553D;
   font-family: "Open Sans", Arial, sans-serif;
-}
+} */
 
 img.social{
 height:40px;
