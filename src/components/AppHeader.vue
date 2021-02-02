@@ -11,10 +11,10 @@
 <script>
 import firebase from "../utilities/firebase"
 export default {
-   props:{"isLoggedInProp":Boolean},
+   props:{"isLoggedInProp":{type:Boolean,required: true}},
 data(){
 
-   return {
+   return {  
       lists: [
          { title:"Home", url:"/"},
          { title:"DC Heros", url: "/dc-heros"},

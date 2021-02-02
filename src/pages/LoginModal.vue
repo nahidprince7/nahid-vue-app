@@ -8,6 +8,9 @@
 <div class="p-2 border">
         <h1 class="text-2xl text-center">Login</h1>
         <h5 class="text-center text-gray-600">Using Firebase</h5>
+        <section class="my-5 text-center">
+          <button class="border px-2">Login with Google</button>
+        </section>
         <form class="p-2 my-2" @submit.prevent="">
           <div class="my-4">
             <label for="">
