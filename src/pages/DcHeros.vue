@@ -26,33 +26,37 @@
 </template>
 
 <script>
+import {computed, onMounted, ref} from "vue";
 export default {
+  setup(){
 
-  data(){
-    return {
-      newHero:"Aquaman",
-      dcHeros:["SuperGirl","Flash","Batman"]
-          }
-  },
-  mounted(){
-    this.$refs.newHeroRef.focus()
-  },
-  computed:{
-    herosCount(){
-        return this.dcHeros.length;
-    }
-  },
-  methods:{
-    addHero(){
-      if(this.newHero !== '' ){
-      this.dcHeros.unshift(this.newHero);
-      this.newHero=''
-      }
-    },
-    remove(index){
+    const newHeroRef = ref("")
+
+    const newHero=ref("Aquaman")
+
+    const dcHeros = ref([
+      'SuperGirl',
+      'Flash',
+      'Batman'
+      ])
+
+    function remove(index){
         console.log( this.dcHeros.filter((hero,i)=>i!==index))
-       this.dcHeros = this.dcHeros.filter((hero,i)=>i!==index);
+       dcHeros.value = dcHeros.value.filter((hero,i)=>i!==index);
     }
+    onMounted(()=>{
+      newHeroRef.value.focus()
+    })
+    function addHero(){
+      if(newHero.value !== '' ){
+      dcHeros.value.unshift(newHero.value);
+      newHero.value=''
+      }
+    }
+    const herosCount = computed({
+        get:()=> dcHeros.value.length,
+    })
+    return {dcHeros,newHero,remove,addHero,newHeroRef,herosCount}
   }
 }
 </script>

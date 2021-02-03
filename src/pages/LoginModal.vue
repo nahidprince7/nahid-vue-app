@@ -1,4 +1,5 @@
 <template>
+
   <section
   @click="close"
    class="z-20 h-screen w-screen bg-gray-700 fixed top-0 opacity-50" ></section>
@@ -8,10 +9,8 @@
 <div class="p-2 border">
         <h1 class="text-2xl text-center">Login</h1>
         <h5 class="text-center text-gray-600">Using Firebase</h5>
-        <section class="my-5 text-center">
-          <button class="border px-2" @click="loginWithGoogle">Login with Google</button>
-        </section>
         <p class="my-5 text-center">Or</p>
+        <GoogleLogin @close-login-from-google = "close" />
         <form class="p-2 my-2" @submit.prevent="">
           <div class="my-4">
             <label for="">
@@ -47,8 +46,9 @@
 <script>
 
 import firebase from '../utilities/firebase'
-
+import GoogleLogin from'../components/login/GoogleLogin'
 export default {
+  components:{GoogleLogin},
   data(){
     return{
         email:'nahidprince7@gmail.com',
@@ -60,16 +60,6 @@ export default {
     this.$refs.email.focus()
   },
   methods:{
-    loginWithGoogle(){
-      var provider = new firebase.auth.GoogleAuthProvider();
-      firebase.auth()
-  .signInWithPopup(provider)
-  .then(() => {
-   
-  })
-    },
-
-
     submit(){
       this.isLoading=true
       firebase.auth().signInWithEmailAndPassword(this.email,this.password)

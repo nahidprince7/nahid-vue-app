@@ -1,7 +1,9 @@
 <template>
 <AppHeader :isLoggedInProp="isLoggedIn"  @open-login-modal="isLoginOpen=true"></AppHeader>
 <router-view></router-view>
+<teleport to="body">
 <LoginModal v-if="isLoginOpen" @close-login-modal="isLoginOpen=false"> </LoginModal>
+</teleport>
 </template>
 
 <script>
