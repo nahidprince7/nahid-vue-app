@@ -1,7 +1,6 @@
 <template>
 
-  <section
-  @click="close"
+  <section @click="close"
    class="z-20 h-screen w-screen bg-gray-700 fixed top-0 opacity-50" ></section>
   <div class="absolute inset-0">
     <div class="flex h-full">

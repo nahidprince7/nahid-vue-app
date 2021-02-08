@@ -16,12 +16,13 @@ data(){
 
    return {  
       lists: [
-         { title:"Profile", url:"/"},
-         { title:"DC Heros", url: "/dc-heros"},
-         { title:"Calender", url: "/calender"},
-         { title:"Markdown App", url: "/markdown"},
-         { title:"Slider ", url: "/slider"},
-         { title:"Calculator", url: "/calculator"},
+         { title:"Profile |", url:"/"},
+         { title:"DC Heros |", url: "/dc-heros"},
+         { title:"Calender |", url: "/calender"},
+         { title:"Markdown App |", url: "/markdown"},
+         { title:"Slider |", url: "/slider"},
+         { title:"Calculator |", url: "/calculator"},
+         { title:"Reusable Modal |", url: "/reusable-modal"},
       ]
    }
 },
