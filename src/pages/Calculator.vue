@@ -35,7 +35,8 @@
 </template>
 
 <script>
-import {onMounted, onUnmounted, ref} from 'vue'
+import {ref} from 'vue'
+import useWindowEvent from '../utilities/composition/useWindowEvent'
 export default {
 setup(){
 
@@ -95,15 +96,10 @@ setup(){
 
     const handleKeydown = (e) => pressed(e.key)
 
-onMounted(()=> {
-window.addEventListener("keydown",handleKeydown)
-})
+    useWindowEvent('keydown',handleKeydown)
 
-onUnmounted(()=>{
-    window.removeEventListener('keydown',handleKeydown)
-})
      
-     const clear= () => (currentNumber.value="")
+    const clear= () => (currentNumber.value="")
 
 
     return{currentNumber,previousNumber,pressed,selectedOperation};

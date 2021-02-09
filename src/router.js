@@ -8,6 +8,7 @@ import Slider from './pages/Slider';
 import Calculator from './pages/Calculator';
 import ReusableModal from './pages/ReusableModal';
 
+
 const routes = [
     { path: '/', component: Home },
     { path: '/dc-heros', component: DcHeros },
@@ -16,6 +17,7 @@ const routes = [
     { path: '/slider', component: Slider },
     { path: '/calculator', component: Calculator },
     { path: '/reusable-modal', component: ReusableModal },
+ 
   ]
 
 const router = createRouter({

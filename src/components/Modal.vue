@@ -4,8 +4,13 @@
     <div class="flex h-full">
       <div class="z-30 m-auto bg-white p-2 rounded shadow w-1/3" >
         <div class="p-2 border">
-        <slot>
-        </slot>
+          <h1 class="text-2xl">
+            <slot name="title"></slot>  
+          </h1>
+          <section>
+          <slot name="body"></slot>  
+          </section>
+          <slot></slot>
         </div>
     </div>
   </div>
