@@ -3,7 +3,7 @@
    <router-link v-for="item in lists" :key="item.url" :to="item.url" class="mx-2">{{item.title}}</router-link>
    
    
-   <button v-if="isLoggedInProp" class="mx-2 float-right" @click="logout">Logout</button>
+   <button v-if="isLoggedIn" class="mx-2 float-right" @click="logout">Logout</button>
    <button v-else class="mx-2 float-right" @click="$emit('open-login-modal')">Login</button>
  </nav>
 </template>
@@ -25,7 +25,8 @@ data(){
          { title:"Reusable Modal |", url: "/reusable-modal"},
          { title:"Chat |", url: "/chat"},
          
-      ]
+      ],
+      
    }
 },
 methods:{
@@ -39,6 +40,11 @@ methods:{
       // })
    }
    
+},
+computed:{
+   isLoggedIn(){
+      return this.$store.state.isLoggedIn
+   }
 }
 }
 </script>

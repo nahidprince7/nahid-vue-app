@@ -2,14 +2,14 @@
   <section class="flex w-full">
       <div class="m-auto">
           <h1 class="text-center text-2xl">Real Time Chat</h1>
-          <div class="border rounded-lg">
+          <div class="border rounded w-80">
               <div class="h-64 p-2">
-                <div v-for="chat in state.chats" :key="chat.message" class="w-full" :class="chat.userId === state.userId ? 'text-right' : '' " >
+                <div v-for="chat in state.chats" :key="chat.message" class="w-full" :class="chat.userId === state.userId ? 'text-right text-green-600' : 'text-red-600' " >
                         {{chat.message}}
                 </div>
               </div>
-               <div class="h-8 p-2">
-                     <input class="p-2 border rounded shadow" 
+               <div class="h-8 flex  w-80">
+                     <input class="m-auto p-3 w-60 border rounded shadow" 
                      placeholder="Start typing .."
                      v-model="state.message" type="text"
                      @keydown.enter="addMessage">
