@@ -1,4 +1,6 @@
 <template>
+<div v-if="isLoginOpen">
+
 
   <section @click="close"
    class="z-20 h-screen w-screen bg-gray-700 fixed top-0 opacity-50" ></section>
@@ -39,7 +41,7 @@
     </div>
 
   </div>
-
+</div>
 </template>
 
 <script>
@@ -50,14 +52,20 @@ export default {
   components:{GoogleLogin},
   data(){
     return{
-        email:'nahidprince7@gmail.com',
+        email:'nahid@gmail.com',
         password:'123456',
         isLoading:false
     }
   },
   mounted(){
-    this.$refs.email.focus()
+    // this.$refs.email.focus()
   },
+  computed:{
+    isLoginOpen(){
+      return this.$store.state.isLoginOpen
+    }
+  }
+  ,
   methods:{
     submit(){
       this.isLoading=true
@@ -76,7 +84,7 @@ export default {
       })
     },
     close(){
-      this.$emit('close-login-modal')
+      this.$store.commit('setLoginModal',false)
     }
   }
 }

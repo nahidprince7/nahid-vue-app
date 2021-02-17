@@ -4,7 +4,7 @@
    
    
    <button v-if="isLoggedIn" class="mx-2 float-right" @click="logout">Logout</button>
-   <button v-else class="mx-2 float-right" @click="$emit('open-login-modal')">Login</button>
+   <button v-else class="mx-2 float-right" @click="openLogin">Login</button>
  </nav>
 </template>
 
@@ -24,6 +24,7 @@ data(){
          { title:"Calculator |", url: "/calculator"},
          { title:"Reusable Modal |", url: "/reusable-modal"},
          { title:"Chat |", url: "/chat"},
+         { title:"User Crud |", url: "/user-crud"},
          
       ],
       
@@ -33,11 +34,9 @@ methods:{
    logout(){
       firebase.auth().signOut()
       alert("You are logged out successfully")
-      // .then(res=>{
- 
-      // }).catch(e=>{
-      //    console.log(e)
-      // })
+   },
+   openLogin(){
+      this.$store.commit('setLoginModal',true)
    }
    
 },
