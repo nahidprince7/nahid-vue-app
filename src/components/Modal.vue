@@ -19,12 +19,11 @@
 
 <script>
 export default {
-
-    setup(_,{emit}){
+// emits: ["close"],
+    setup(_,{ emit }){
         function close(){
-            emit("close-login")
+            emit("close")
         }
-
         return{close}
     }
 

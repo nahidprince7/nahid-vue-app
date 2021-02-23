@@ -3,7 +3,7 @@
       <div class="m-auto">
             <h1 class="text-2xl my-5 text-center">Re-Usable Modal<small class="">(using slot and named slot)</small></h1> 
            
-            <Modal v-if="isRedModalOpen" @close-login="isRedModalOpen=false">
+            <Modal v-if="isRedModalOpen" @close="isRedModalOpen=false">
             <template v-slot:title>
                 <h1>This is Modal 1</h1>
             </template>
@@ -12,7 +12,7 @@
             </template>
             </Modal>
             
-            <Modal v-if="isBlueModalOpen" @close-login="isBlueModalOpen=false">
+            <Modal v-if="isBlueModalOpen" @close="isBlueModalOpen=false">
             <template #title>
                 <h1>This is Modal 2</h1>
             </template>
